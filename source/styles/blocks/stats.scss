@@ -1,0 +1,198 @@
+.stats {
+    background-color: $darkgrey;
+    color: #ffffff;
+}
+.stats__wrapper {
+    @media (min-width: $tablet-width) {
+        $stats-shift: -179px;
+
+        padding: 0 64px;
+        position: relative;
+        top: $stats-shift;
+        margin-bottom: $stats-shift;
+    }
+    
+    @media (min-width: $desktop-width) {
+        $stats-shift: -159px;
+
+        top: $stats-shift;
+        margin: auto;
+        margin-bottom: $stats-shift;
+        max-width: 960px;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+.stats__header {
+    padding: 28px 20px;
+    background-color: #ffffff;
+    color: #000000;
+
+    @media (min-width: $tablet-width) {
+        position: relative;
+        padding-top: 32px;
+        padding-right: 34px;
+        padding-left: 34px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &::before {
+            position: absolute;
+            left: -23px;
+            top: 42px;
+            width: 23px;
+            height: 23px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpolygon points='0,0 1,0 1,1' fill='white'/%3E%3C/svg%3E");
+            content: "";
+        }
+    }
+    @media (min-width: $desktop-width) {
+        grid-template-columns: auto;
+        grid-template-rows: min-content 1fr min-content;
+        align-content: start;
+    }
+}
+
+.stats__slogan {
+    margin: 0;
+    margin-bottom: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 17px;
+        text-align: left;
+        text-transform: none;
+        font-size: 40px;
+    }
+    @media (min-width: $desktop-width) {
+        margin-bottom: 32px;
+    }
+}
+
+.stats__intro {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.35;
+    text-align: center;
+    
+    @media (max-width: $mobile-width-only) {
+        br {
+            display: none;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        padding-top: 4px;
+        padding-left: 34px;
+        text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 0;
+    }
+}
+
+.stats__legend {
+    margin: 0;
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.stats__legend--top {
+    color: rgba($color: #000000, $alpha: 0.3);
+
+    @media (max-width: $mobile-width-only) {
+        display: none;
+    }
+}
+
+.stats__legend--bottom {
+    text-align: center;
+    color: rgba($color: #ffffff, $alpha: 0.3);
+
+ @media (min-width: $tablet-width) {
+     display: none;
+ }
+}
+.stats__list {
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: #353535;
+
+    @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
+}
+
+.stats__item {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+        display: block;
+        padding-top: 25px;
+        padding-right: 34px;
+        padding-bottom: 30px;
+        padding-left: 34px;
+    }
+}
+
+.stats__item:nth-child(1) {
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+}
+.stats__item:nth-child(2) {
+    background-color: rgba($color: #ffffff, $alpha: 0.12);
+}
+.stats__item:nth-child(4) {
+    background-color: rgba($color: #ffffff, $alpha: 0.12);
+
+    @media (min-width: $tablet-width) {
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+    }
+}
+
+.stats__number {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 40px;
+
+    sup {
+        position: static;
+        margin-left: 5px;
+        vertical-align: baseline;
+        font-size: inherit;
+    }
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 12px;
+        font-size: 72px;
+    }
+}
+
+.stats__description {
+    margin: 0;
+    text-align: right;
+    line-height: 1;
+    font-size: 18px;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+        font-size: 20px;
+
+        br {
+            display: none;
+        }
+    }
+}

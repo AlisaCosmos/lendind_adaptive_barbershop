@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/pt-sans-narrow.woff") format("woff"),
+    url("../fonts/pt-sans-narrow.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "PT Sans Narrow";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/pt-sans-narrow-bold.woff") format("woff"),
+    url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  }
